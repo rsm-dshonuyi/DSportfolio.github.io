@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damilare Shonuyi - Python Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Highlight.js for Python syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" integrity="sha512-Jk4AqjWsdSzSWCSuQTfYRIF84Rq/eV0G2+tu07byYwHcbTGfdmLrHjUSwvzp5HvbiqK4ibmNwdcG49Y5RGYPTg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" integrity="sha512-wW9Wn/gy4LrJD/ednL9AdR6TMLJ+xNEVzQ8n/gKX+F+lRPLG9P2sVKKzuIOxf7qD6nxaLf6+MR+9ToSB4gQR5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DS Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#python-files">Python Files</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Damilare Shonuyi</h1>
+                <p class="tagline">Data Science & Python Development Portfolio</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! Here you can explore my Python projects and code samples.</p>
+            </div>
+        </section>
+
+        <section id="python-files" class="python-files">
+            <div class="container">
+                <h2>Python Files</h2>
+                <p class="section-description">Browse my Python code samples and projects below.</p>
+                
+                <div class="file-grid">
+                    <!-- Sample Python File 1 -->
+                    <div class="file-card">
+                        <div class="file-header">
+                            <span class="file-icon">🐍</span>
+                            <h3>hello_world.py</h3>
+                        </div>
+                        <div class="file-content">
+                            <pre><code class="language-python"># A simple Hello World program
+def greet(name):
+    """Greet someone by name."""
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    message = greet("World")
+    print(message)</code></pre>
+                        </div>
+                        <div class="file-footer">
+                            <span class="file-tag">Basics</span>
+                        </div>
+                    </div>
+
+                    <!-- Sample Python File 2 -->
+                    <div class="file-card">
+                        <div class="file-header">
+                            <span class="file-icon">🐍</span>
+                            <h3>data_analysis.py</h3>
+                        </div>
+                        <div class="file-content">
+                            <pre><code class="language-python"># Data Analysis Example
+import pandas as pd
+import numpy as np
+
+def analyze_data(data):
+    """Perform basic data analysis."""
+    df = pd.DataFrame(data)
+    
+    stats = {
+        'mean': df.mean(),
+        'std': df.std(),
+        'min': df.min(),
+        'max': df.max()
+    }
+    
+    return stats
+
+# Sample usage
+data = {'values': [10, 20, 30, 40, 50]}
+result = analyze_data(data)
+print(result)</code></pre>
+                        </div>
+                        <div class="file-footer">
+                            <span class="file-tag">Data Science</span>
+                        </div>
+                    </div>
+
+                    <!-- Sample Python File 3 -->
+                    <div class="file-card">
+                        <div class="file-header">
+                            <span class="file-icon">🐍</span>
+                            <h3>calculator.py</h3>
+                        </div>
+                        <div class="file-content">
+                            <pre><code class="language-python"># Simple Calculator
+class Calculator:
+    """A simple calculator class."""
+    
+    def add(self, a, b):
+        return a + b
+    
+    def subtract(self, a, b):
+        return a - b
+    
+    def multiply(self, a, b):
+        return a * b
+    
+    def divide(self, a, b):
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        return a / b
+
+# Usage example
+calc = Calculator()
+print(calc.add(5, 3))       # Output: 8
+print(calc.multiply(4, 7))  # Output: 28</code></pre>
+                        </div>
+                        <div class="file-footer">
+                            <span class="file-tag">OOP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Feel free to reach out for collaborations or questions about my work.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Damilare Shonuyi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize syntax highlighting
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</body>
+</html>
