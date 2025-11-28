@@ -1,0 +1,248 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #306998;
+    --secondary-color: #FFD43B;
+    --dark-bg: #1a1a2e;
+    --card-bg: #16213e;
+    --text-light: #eaeaea;
+    --text-muted: #a0a0a0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+header {
+    background-color: rgba(22, 33, 62, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--card-bg) 100%);
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background-color: var(--card-bg);
+}
+
+.about h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* Python Files Section */
+.python-files {
+    padding: 80px 0;
+}
+
+.python-files h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.file-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 212, 59, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 212, 59, 0.1);
+}
+
+.file-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(48, 105, 152, 0.3);
+    border-bottom: 1px solid rgba(255, 212, 59, 0.2);
+}
+
+.file-icon {
+    font-size: 1.5rem;
+}
+
+.file-header h3 {
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+}
+
+.file-content {
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-content pre {
+    margin: 0;
+    padding: 1rem;
+    background-color: #282c34;
+    font-size: 0.85rem;
+}
+
+.file-content code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.file-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 212, 59, 0.2);
+}
+
+.file-tag {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(22, 33, 62, 0.95);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .file-grid {
+        grid-template-columns: 1fr;
+    }
+}
